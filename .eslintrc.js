@@ -33,7 +33,10 @@ module.exports = {
     camelcase: "off",
     "func-names": "off",
     eqeqeq: "error",
+    "lines-between-class-members": "off",
+    "max-classes-per-file": "off",
     "no-underscore-dangle": "off",
+
     "import/prefer-default-export": "off",
   },
 };

@@ -6,10 +6,3 @@
  * the Apache License 2.0.  The full license can be found in the LICENSE file.
  *
  */
-
-import pkg_json from "../../package.json";
-
-export const VERSION = pkg_json.version;
-
-export * from "./base";
-export * from "./ops";
