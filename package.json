@@ -21,15 +21,15 @@
     "babel.config.js",
     "index.d.ts"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build:rollup": "rollup -c rollup.config.js",
     "build": "npm-run-all -p build:*",
     "fix": "yarn lint --fix",
     "lint": "eslint --ext js src/",
     "test": "NODE_ENV=test jest --config .jestrc.js --forceExit"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {
     "ajv": "^8.6.3",
