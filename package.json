@@ -1,6 +1,6 @@
 {
-  "name": "tributary",
-  "version": "0.3.1",
+  "name": "tributary.js",
+  "version": "0.0.1",
   "description": "JS Streams",
   "repository": {
     "type": "git",
