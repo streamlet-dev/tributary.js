@@ -7,6 +7,8 @@
  *
  */
 
+/* eslint-disable max-classes-per-file */
+
 // loosely based on https://github.com/streamlet-dev/tributary/blob/main/tributary/streaming/node.py
 import Ajv from "ajv";
 import highland from "highland";
@@ -36,6 +38,7 @@ export const validateSpec = ajv.compile(NodeSchema);
 
 export class Node {
   #name;
+
   #foo;
 
   /**
@@ -45,7 +48,7 @@ export class Node {
    * @param {Function} params.foo Function to call
    */
   constructor(params) {
-    const { name, foo } = params;
+    const {name, foo} = params;
     this.#name = name;
     this.#foo = foo;
   }
@@ -57,8 +60,11 @@ export class Node {
 
 export class NodeSpec {
   #name;
+
   #description;
+
   #foo;
+
   #args;
 
   /**
@@ -74,7 +80,7 @@ export class NodeSpec {
       throw new Error("Invalid Node Spec");
     }
 
-    const { name, description, foo, args } = params;
+    const {name, description, foo, args} = params;
     this.#name = name;
     this.#description = description;
     this.#foo = foo;
@@ -94,6 +100,6 @@ export class NodeSpec {
     if (!this.validateArgs(args)) {
       throw new Error(`Invalid args: ${JSON.stringify(args)}`);
     }
-    return new Node({ name: this.#name, foo: this.#foo(args) });
+    return new Node({name: this.#name, foo: this.#foo(args)});
   }
 }

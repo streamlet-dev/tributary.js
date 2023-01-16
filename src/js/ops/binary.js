@@ -8,9 +8,9 @@
  */
 /* eslint-disable no-param-reassign */
 
-import { NodeSpec } from "../base";
+import {NodeSpec} from "../base";
 
-const baseSpec = ({ name, description, foo }) => ({
+const baseSpec = ({name, description, foo}) => ({
   name,
   description,
   foo: (args) => (datum) => {
@@ -35,8 +35,8 @@ const baseSpec = ({ name, description, foo }) => ({
 });
 
 export class Binary extends NodeSpec {
-  constructor({ name, description, foo }) {
-    super(baseSpec({ name, description, foo }));
+  constructor({name, description, foo}) {
+    super(baseSpec({name, description, foo}));
   }
 }
 
