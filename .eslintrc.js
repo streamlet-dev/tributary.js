@@ -1,4 +1,4 @@
-/* ***************************************************************************
+/******************************************************************************
  *
  * Copyright (c) 2021, the tributary.js authors.
  *
@@ -6,37 +6,62 @@
  * the Apache License 2.0.  The full license can be found in the LICENSE file.
  *
  */
+
 module.exports = {
-  parser: "babel-eslint",
+  parser: "@babel/eslint-parser",
+  extends: ["airbnb-base", "prettier", "plugin:json/recommended"],
+  plugins: ["prettier", "jest"],
   env: {
     browser: true,
-    es2021: true,
+    commonjs: true,
+    es6: true,
     node: true,
+    jasmine: true,
+    jest: true,
+    "jest/globals": true,
   },
-  extends: ["airbnb-base", "prettier"],
-  plugins: ["prettier", "jest"],
   parserOptions: {
-    ecmaVersion: 12,
+    ecmaVersion: 2017,
+    ecmaFeatures: {},
     sourceType: "module",
+    experimentalObjectRestSpread: true,
   },
   rules: {
     "prettier/prettier": [
       "error",
       {
-        semi: true,
-        singleQuote: false,
+        printWidth: 200,
         tabWidth: 2,
-        useTabs: false,
-        trailingComma: "all",
+        bracketSpacing: false,
+      },
+    ],
+    "max-len": [
+      "warn",
+      {
+        code: 200,
+        comments: 200,
+        ignoreTrailingComments: true,
       },
     ],
     camelcase: "off",
-    "func-names": "off",
-    eqeqeq: "error",
-    "lines-between-class-members": "off",
-    "max-classes-per-file": "off",
+    "class-methods-use-this": "off",
+    "constructor-super": "error",
+    indent: "off",
+    "linebreak-style": ["error", "unix"],
+    "no-const-assign": "error",
+    "no-nested-ternary": "warn",
+    "no-this-before-super": "error",
+    "no-undef": "error",
     "no-underscore-dangle": "off",
+    "no-unreachable": "error",
+    "no-unused-vars": "warn",
+    "object-curly-spacing": "off",
+    quotes: "off",
+    "spaced-comment": "off",
+    "valid-typeof": "error",
 
+    "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
   },
 };
