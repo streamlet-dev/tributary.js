@@ -9,7 +9,7 @@
 
 /* eslint-disable max-classes-per-file */
 
-// loosely based on https://github.com/streamlet-dev/tributary/blob/main/tributary/streaming/node.py
+// loosely based on https://github.com/1kbgz/tributary/blob/main/tributary/streaming/node.py
 import Ajv from "ajv";
 import highland from "highland";
 
